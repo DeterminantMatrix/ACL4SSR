@@ -13,6 +13,8 @@ proxy-groups:
       - "🇺🇸 白丝"
       - "🇭🇰 华纳云"
       - "🇭🇰 白猫云"
+      - "🇯🇵 落地鸡"
+      - "🇺🇸 落地鸡"
       - "DIRECT"
 
   - name: "🤖 AI"
@@ -23,6 +25,8 @@ proxy-groups:
       - "🇺🇸 白丝"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
+      - "🇯🇵 落地鸡"
+      - "🇺🇸 落地鸡"
       - "🚀 节点选择"
       - "默认出口 自动"
       - "DIRECT"
@@ -35,6 +39,8 @@ proxy-groups:
       - "🇰🇷 韩国"
       - "🇭🇰 香港"
       - "🇺🇸 美东"
+      - "🇯🇵 落地鸡"
+      - "🇺🇸 落地鸡"
       - "🚀 节点选择"
       - "默认出口 自动"
       - "DIRECT"
@@ -74,7 +80,7 @@ proxy-groups:
   - name: "🇰🇷 韩国"
     type: url-test
     include-all-proxies: true
-    filter: '(?i)\bALI\b|Ali|阿里|kr\.shzt\.de'
+    filter: '(?i)(^|[^A-Za-z])ALI([^A-Za-z]|$)|阿里|kr\.shzt\.de'
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -114,6 +120,16 @@ proxy-groups:
     type: select
     include-all-proxies: true
     filter: '(?i)白猫|BaiCat|Baicat|baicat\.shzt\.de'
+
+  - name: "🇯🇵 落地鸡"
+    type: select
+    proxies:
+      - "DIRECT"
+
+  - name: "🇺🇸 落地鸡"
+    type: select
+    proxies:
+      - "DIRECT"
 
 rule-providers:
   cn_domain:
