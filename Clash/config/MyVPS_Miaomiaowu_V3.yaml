@@ -2,53 +2,60 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - "🇺🇸 美西"
-      - "🇯🇵 日本"
-      - "🇭🇰 香港"
-      - "🇰🇷 韩国"
-      - "🇺🇸 美东"
-      - "🇳🇱 HostFuchs"
-      - "默认出口 自动"
       - "🇺🇸 DMIT"
       - "🇺🇸 白丝"
       - "🇭🇰 华纳云"
       - "🇭🇰 白猫云"
+      - "🇺🇸 美西"
+      - "🇯🇵 日本"
+      - "🇰🇷 韩国"
+      - "🇺🇸 美东"
       - "🇯🇵 落地鸡"
       - "🇺🇸 落地鸡"
+      - "默认出口 自动"
+      - "🇳🇱 荷兰"
       - "DIRECT"
 
   - name: "🤖 AI"
     type: select
     proxies:
-      - "🇺🇸 美西"
+      - "🇺🇸 落地鸡"
+      - "🇯🇵 落地鸡"
       - "🇺🇸 DMIT"
       - "🇺🇸 白丝"
+      - "🇭🇰 白猫云"
+      - "🇭🇰 华纳云"
+      - "🇺🇸 美西"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
-      - "🇯🇵 落地鸡"
-      - "🇺🇸 落地鸡"
-      - "🚀 节点选择"
       - "默认出口 自动"
+      - "🇺🇸 美东"
+      - "🚀 节点选择"
+      - "🇳🇱 荷兰"
       - "DIRECT"
 
   - name: "🎬 Streaming"
     type: select
     proxies:
+      - "🇺🇸 DMIT"
+      - "🇺🇸 白丝"
+      - "🇭🇰 华纳云"
+      - "🇭🇰 白猫云"
       - "🇺🇸 美西"
+      - "🇺🇸 美东"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
-      - "🇭🇰 香港"
-      - "🇺🇸 美东"
-      - "🇯🇵 落地鸡"
-      - "🇺🇸 落地鸡"
-      - "🚀 节点选择"
       - "默认出口 自动"
+      - "🚀 节点选择"
+      - "🇳🇱 荷兰"
       - "DIRECT"
 
   - name: "默认出口 自动"
     type: fallback
     include-all-proxies: true
     filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|BigGlobe|BIgGlobe|懒猫|ALI|Ali|阿里|HostFuchs|HostingFuchs|华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -57,6 +64,8 @@ proxy-groups:
     type: url-test
     include-all-proxies: true
     filter: '(?i)Nobrand|NoBrand|GreenCloud|IIJ|BigGlobe|BIgGlobe|懒猫|nobrand\.shzt\.de|iij\.olise\.top|118\.109\.201\.192'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -65,6 +74,8 @@ proxy-groups:
     type: url-test
     include-all-proxies: true
     filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|lax\.shzt\.de|rabisu\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -73,6 +84,8 @@ proxy-groups:
     type: url-test
     include-all-proxies: true
     filter: '(?i)ChicagoVPS|Chicago|chicago\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -81,22 +94,18 @@ proxy-groups:
     type: url-test
     include-all-proxies: true
     filter: '(?i)(^|[^A-Za-z])ALI([^A-Za-z]|$)|阿里|kr\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
 
-  - name: "🇭🇰 香港"
-    type: url-test
-    include-all-proxies: true
-    filter: '(?i)华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de'
-    url: https://www.gstatic.com/generate_204
-    interval: 60
-    tolerance: 10
-
-  - name: "🇳🇱 HostFuchs"
+  - name: "🇳🇱 荷兰"
     type: url-test
     include-all-proxies: true
     filter: '(?i)HostFuchs|HostingFuchs|de\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
     interval: 60
     tolerance: 10
@@ -105,31 +114,47 @@ proxy-groups:
     type: select
     include-all-proxies: true
     filter: '(?i)DMIT|Malibu'
+    proxies:
+      - "⛓️‍💥 代理节点"
 
   - name: "🇺🇸 白丝"
     type: select
     include-all-proxies: true
     filter: '(?i)Silk|4837|白丝'
+    proxies:
+      - "⛓️‍💥 代理节点"
 
   - name: "🇭🇰 华纳云"
     type: select
     include-all-proxies: true
     filter: '(?i)华纳|hny\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
 
   - name: "🇭🇰 白猫云"
     type: select
     include-all-proxies: true
     filter: '(?i)白猫|BaiCat|Baicat|baicat\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
 
   - name: "🇯🇵 落地鸡"
     type: select
+    include-all-proxies: true
+    filter: 'Globe'
     proxies:
+      - "⛓️‍💥 代理节点"
       - "DIRECT"
+    dialer-proxy-group: "🇯🇵 日本"
 
   - name: "🇺🇸 落地鸡"
     type: select
+    include-all-proxies: true
+    filter: 'Bread'
     proxies:
+      - "⛓️‍💥 代理节点"
       - "DIRECT"
+    dialer-proxy-group: "🇺🇸 DMIT"
 
 rule-providers:
   cn_domain:
