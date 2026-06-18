@@ -53,7 +53,7 @@ proxy-groups:
   - name: "默认出口 自动"
     type: fallback
     include-all-proxies: true
-    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|BigGlobe|BIgGlobe|懒猫|ALI|Ali|阿里|HostFuchs|HostingFuchs|华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
+    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
       - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
@@ -63,7 +63,7 @@ proxy-groups:
   - name: "🇯🇵 日本"
     type: url-test
     include-all-proxies: true
-    filter: '(?i)Nobrand|NoBrand|GreenCloud|IIJ|BigGlobe|BIgGlobe|懒猫|nobrand\.shzt\.de|iij\.olise\.top|118\.109\.201\.192'
+    filter: '(?i)Nobrand|NoBrand|GreenCloud|IIJ|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
       - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
@@ -150,7 +150,7 @@ proxy-groups:
   - name: "🇺🇸 落地鸡"
     type: select
     include-all-proxies: true
-    filter: 'Bread'
+    filter: 'Frontier'
     proxies:
       - "⛓️‍💥 代理节点"
       - "DIRECT"
