@@ -40,7 +40,7 @@ proxy-groups:
       - "DIRECT"
 
   - name: "默认出口 自动"
-    type: fallback
+    type: url-test
     include-all-proxies: true
     filter: '(?i)Rabisu|HostDZire|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|(^|[^A-Za-z])ALI([^A-Za-z]|$)|HostFuchs|HostingFuchs|BaiCat|Baicat|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
