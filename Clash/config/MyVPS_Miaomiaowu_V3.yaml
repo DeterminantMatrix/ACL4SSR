@@ -51,7 +51,7 @@ proxy-groups:
       - "DIRECT"
 
   - name: "默认出口 自动"
-    type: fallback
+    type: url-test
     include-all-proxies: true
     filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
@@ -73,7 +73,7 @@ proxy-groups:
   - name: "🇺🇸 美西"
     type: url-test
     include-all-proxies: true
-    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|lax\.shzt\.de|rabisu\.shzt\.de'
+    filter: '(?i)Rabisu|HostDZire|lax\.shzt\.de|rabisu\.shzt\.de'
     proxies:
       - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
