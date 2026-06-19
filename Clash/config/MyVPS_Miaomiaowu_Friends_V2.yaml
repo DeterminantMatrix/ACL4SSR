@@ -109,7 +109,7 @@ proxy-groups:
   - name: "🇯🇵 落地鸡"
     type: select
     include-all-proxies: true
-    filter: 'Globe'
+    filter: '(?i)懒猫|BigGlobe|BIgGlobe'
     proxies:
       - "⛓️‍💥 代理节点"
       - "DIRECT"
