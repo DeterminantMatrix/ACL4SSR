@@ -1,0 +1,298 @@
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - 🇭🇰 白猫云
+  - 🇺🇸 美西
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 🇺🇸 美东
+  - 🇯🇵 落地鸡
+  - 默认出口 自动
+  - 🇳🇱 荷兰
+  - DIRECT
+- name: 🤖 AI
+  type: select
+  proxies:
+  - 🇯🇵 落地鸡
+  - 🇭🇰 白猫云
+  - 🇺🇸 美西
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 默认出口 自动
+  - 🇺🇸 美东
+  - 🚀 节点选择
+  - 🇳🇱 荷兰
+  - DIRECT
+- name: 🎬 Streaming
+  type: select
+  proxies:
+  - 🇭🇰 白猫云
+  - 🇺🇸 美西
+  - 🇺🇸 美东
+  - 🇯🇵 日本
+  - 🇰🇷 韩国
+  - 默认出口 自动
+  - 🚀 节点选择
+  - 🇳🇱 荷兰
+  - DIRECT
+- name: 默认出口 自动
+  type: fallback
+  include-all-proxies: true
+  filter: (?i)Rabisu|HostDZire|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|(^|[^A-Za-z])ALI([^A-Za-z]|$)|HostFuchs|HostingFuchs|BaiCat|Baicat|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇯🇵 日本
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)Nobrand|NoBrand|GreenCloud|IIJ|nobrand\.shzt\.de|iij\.olise\.top
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇺🇸 美西
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)Rabisu|HostDZire|lax\.shzt\.de|rabisu\.shzt\.de
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇺🇸 美东
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)ChicagoVPS|Chicago|chicago\.shzt\.de
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇰🇷 韩国
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(^|[^A-Za-z])ALI([^A-Za-z]|$)|阿里|kr\.shzt\.de
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇳🇱 荷兰
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)HostFuchs|HostingFuchs|de\.shzt\.de
+  proxies:
+  - ⛓️‍💥 代理节点
+  url: https://www.gstatic.com/generate_204
+  interval: 60
+  tolerance: 10
+- name: 🇭🇰 白猫云
+  type: select
+  include-all-proxies: true
+  filter: (?i)白猫|BaiCat|Baicat|baicat\.shzt\.de
+  proxies:
+  - ⛓️‍💥 代理节点
+- name: 🇯🇵 落地鸡
+  type: select
+  include-all-proxies: true
+  filter: Globe
+  proxies:
+  - ⛓️‍💥 代理节点
+  - DIRECT
+  dialer-proxy-group: 🇯🇵 日本
+rule-providers:
+  cn_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml
+    path: ./ruleset/metacubex/cn.yaml
+  cn_ip:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml
+    path: ./ruleset/metacubex/cn-ip.yaml
+  applications:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt
+    path: ./ruleset/loyalsoldier/applications.yaml
+  private:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt
+    path: ./ruleset/loyalsoldier/private.yaml
+  reject:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt
+    path: ./ruleset/loyalsoldier/reject.yaml
+  lancidr:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt
+    path: ./ruleset/loyalsoldier/lancidr.yaml
+  cncidr:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt
+    path: ./ruleset/loyalsoldier/cncidr.yaml
+  ai:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-%21cn.yaml
+    path: ./ruleset/metacubex/ai.yaml
+  youtube_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.yaml
+    path: ./ruleset/metacubex/youtube.yaml
+  netflix_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.yaml
+    path: ./ruleset/metacubex/netflix.yaml
+  netflix_ip:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.yaml
+    path: ./ruleset/metacubex/netflix-ip.yaml
+  disney_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/disney.yaml
+    path: ./ruleset/metacubex/disney.yaml
+  spotify_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.yaml
+    path: ./ruleset/metacubex/spotify.yaml
+  appletv_domain:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-tvplus.yaml
+    path: ./ruleset/metacubex/apple-tvplus.yaml
+  icloud:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt
+    path: ./ruleset/loyalsoldier/icloud.yaml
+  apple:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt
+    path: ./ruleset/loyalsoldier/apple.yaml
+  google:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt
+    path: ./ruleset/loyalsoldier/google.yaml
+  gfw:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    path: ./ruleset/loyalsoldier/gfw.yaml
+  proxy:
+    type: http
+    behavior: domain
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt
+    path: ./ruleset/loyalsoldier/proxy.yaml
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
+    path: ./ruleset/loyalsoldier/telegramcidr.yaml
+rules:
+- DOMAIN,localhost,DIRECT
+- DOMAIN-SUFFIX,localhost,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+- IP-CIDR,::1/128,DIRECT,no-resolve
+- DOMAIN-SUFFIX,nju.edu.cn,DIRECT
+- DOMAIN-KEYWORD,fszb,DIRECT
+- DOMAIN-SUFFIX,rsfs.fangujn.com,DIRECT
+- DOMAIN-SUFFIX,fs-play.ipqipq.cn,DIRECT
+- DOMAIN-SUFFIX,apc.xzood6veuybwkr.com,DIRECT
+- DOMAIN-SUFFIX,openim-php-api.q2n1w3g2y5v0w4l1.cc,DIRECT
+- DOMAIN-SUFFIX,ws.n8u4z2s4j8m6d9g7.xyz,DIRECT
+- RULE-SET,cn_domain,DIRECT
+- RULE-SET,cn_ip,DIRECT,no-resolve
+- DOMAIN,alibaba.cdn.steampipe.steamcontent.com,DIRECT
+- DOMAIN,steamcdn-a.akamaihd.net,DIRECT
+- DOMAIN,steampipe.akamaized.net,DIRECT
+- DOMAIN,steampipe-partner.akamaized.net,DIRECT
+- DOMAIN,steampipe-kr.akamaized.net,DIRECT
+- DOMAIN-SUFFIX,steamcontent.com,DIRECT
+- DOMAIN-SUFFIX,steamserver.net,DIRECT
+- RULE-SET,applications,DIRECT
+- DOMAIN,clash.razord.top,DIRECT
+- DOMAIN,yacd.haishan.me,DIRECT
+- RULE-SET,private,DIRECT
+- RULE-SET,reject,REJECT
+- RULE-SET,lancidr,DIRECT,no-resolve
+- RULE-SET,cncidr,DIRECT,no-resolve
+- DOMAIN-SUFFIX,tabbitbrowser.com,🚀 节点选择
+- DOMAIN-SUFFIX,tabbit.ai,🚀 节点选择
+- DOMAIN-SUFFIX,tabbit-ai.com,🚀 节点选择
+- RULE-SET,ai,🤖 AI
+- RULE-SET,youtube_domain,🎬 Streaming
+- RULE-SET,netflix_domain,🎬 Streaming
+- RULE-SET,netflix_ip,🎬 Streaming,no-resolve
+- RULE-SET,disney_domain,🎬 Streaming
+- RULE-SET,spotify_domain,🎬 Streaming
+- RULE-SET,appletv_domain,🎬 Streaming
+- DOMAIN-SUFFIX,twitch.tv,🎬 Streaming
+- DOMAIN-SUFFIX,twitchcdn.net,🎬 Streaming
+- DOMAIN-SUFFIX,ttvnw.net,🎬 Streaming
+- DOMAIN-SUFFIX,jtvnw.net,🎬 Streaming
+- DOMAIN-SUFFIX,ext-twitch.tv,🎬 Streaming
+- DOMAIN-SUFFIX,twitchsvc.net,🎬 Streaming
+- RULE-SET,icloud,DIRECT
+- RULE-SET,apple,DIRECT
+- RULE-SET,google,🚀 节点选择
+- RULE-SET,gfw,🚀 节点选择
+- RULE-SET,proxy,🚀 节点选择
+- RULE-SET,telegramcidr,🚀 节点选择,no-resolve
+- MATCH,🚀 节点选择
