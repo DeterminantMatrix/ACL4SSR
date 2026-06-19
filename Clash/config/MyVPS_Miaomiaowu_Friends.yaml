@@ -1,109 +1,120 @@
 proxy-groups:
-- name: 🚀 节点选择
-  type: select
-  proxies:
-  - 🇭🇰 白猫云
-  - 🇺🇸 美西
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 🇺🇸 美东
-  - 🇯🇵 落地鸡
-  - 默认出口 自动
-  - 🇳🇱 荷兰
-  - DIRECT
-- name: 🤖 AI
-  type: select
-  proxies:
-  - 🇯🇵 落地鸡
-  - 🇭🇰 白猫云
-  - 🇺🇸 美西
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 默认出口 自动
-  - 🇺🇸 美东
-  - 🚀 节点选择
-  - 🇳🇱 荷兰
-  - DIRECT
-- name: 🎬 Streaming
-  type: select
-  proxies:
-  - 🇭🇰 白猫云
-  - 🇺🇸 美西
-  - 🇺🇸 美东
-  - 🇯🇵 日本
-  - 🇰🇷 韩国
-  - 默认出口 自动
-  - 🚀 节点选择
-  - 🇳🇱 荷兰
-  - DIRECT
-- name: 默认出口 自动
-  type: fallback
-  include-all-proxies: true
-  filter: (?i)Rabisu|HostDZire|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|(^|[^A-Za-z])ALI([^A-Za-z]|$)|HostFuchs|HostingFuchs|BaiCat|Baicat|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇯🇵 日本
-  type: url-test
-  include-all-proxies: true
-  filter: (?i)Nobrand|NoBrand|GreenCloud|IIJ|nobrand\.shzt\.de|iij\.olise\.top
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇺🇸 美西
-  type: url-test
-  include-all-proxies: true
-  filter: (?i)Rabisu|HostDZire|lax\.shzt\.de|rabisu\.shzt\.de
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇺🇸 美东
-  type: url-test
-  include-all-proxies: true
-  filter: (?i)ChicagoVPS|Chicago|chicago\.shzt\.de
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇰🇷 韩国
-  type: url-test
-  include-all-proxies: true
-  filter: (?i)(^|[^A-Za-z])ALI([^A-Za-z]|$)|阿里|kr\.shzt\.de
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇳🇱 荷兰
-  type: url-test
-  include-all-proxies: true
-  filter: (?i)HostFuchs|HostingFuchs|de\.shzt\.de
-  proxies:
-  - ⛓️‍💥 代理节点
-  url: https://www.gstatic.com/generate_204
-  interval: 60
-  tolerance: 10
-- name: 🇭🇰 白猫云
-  type: select
-  include-all-proxies: true
-  filter: (?i)白猫|BaiCat|Baicat|baicat\.shzt\.de
-  proxies:
-  - ⛓️‍💥 代理节点
-- name: 🇯🇵 落地鸡
-  type: select
-  include-all-proxies: true
-  filter: Globe
-  proxies:
-  - ⛓️‍💥 代理节点
-  - DIRECT
-  dialer-proxy-group: 🇯🇵 日本
+  - name: "🚀 节点选择"
+    type: select
+    proxies:
+      - "🇭🇰 白猫云"
+      - "🇺🇸 美西"
+      - "🇯🇵 日本"
+      - "🇰🇷 韩国"
+      - "🇺🇸 美东"
+      - "🇯🇵 落地鸡"
+      - "默认出口 自动"
+      - "🇳🇱 荷兰"
+      - "DIRECT"
+
+  - name: "🤖 AI"
+    type: select
+    proxies:
+      - "🇯🇵 落地鸡"
+      - "🇭🇰 白猫云"
+      - "🇺🇸 美西"
+      - "🇯🇵 日本"
+      - "🇰🇷 韩国"
+      - "默认出口 自动"
+      - "🇺🇸 美东"
+      - "🚀 节点选择"
+      - "🇳🇱 荷兰"
+      - "DIRECT"
+
+  - name: "🎬 Streaming"
+    type: select
+    proxies:
+      - "🇭🇰 白猫云"
+      - "🇺🇸 美西"
+      - "🇺🇸 美东"
+      - "🇯🇵 日本"
+      - "🇰🇷 韩国"
+      - "默认出口 自动"
+      - "🚀 节点选择"
+      - "🇳🇱 荷兰"
+      - "DIRECT"
+
+  - name: "默认出口 自动"
+    type: fallback
+    include-all-proxies: true
+    filter: '(?i)Rabisu|HostDZire|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|(^|[^A-Za-z])ALI([^A-Za-z]|$)|HostFuchs|HostingFuchs|BaiCat|Baicat|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇯🇵 日本"
+    type: url-test
+    include-all-proxies: true
+    filter: '(?i)Nobrand|NoBrand|GreenCloud|IIJ|nobrand\.shzt\.de|iij\.olise\.top'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇺🇸 美西"
+    type: url-test
+    include-all-proxies: true
+    filter: '(?i)Rabisu|HostDZire|lax\.shzt\.de|rabisu\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇺🇸 美东"
+    type: url-test
+    include-all-proxies: true
+    filter: '(?i)ChicagoVPS|Chicago|chicago\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇰🇷 韩国"
+    type: url-test
+    include-all-proxies: true
+    filter: '(?i)(^|[^A-Za-z])ALI([^A-Za-z]|$)|阿里|kr\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇳🇱 荷兰"
+    type: url-test
+    include-all-proxies: true
+    filter: '(?i)HostFuchs|HostingFuchs|de\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 10
+
+  - name: "🇭🇰 白猫云"
+    type: select
+    include-all-proxies: true
+    filter: '(?i)白猫|BaiCat|Baicat|baicat\.shzt\.de'
+    proxies:
+      - "⛓️‍💥 代理节点"
+
+  - name: "🇯🇵 落地鸡"
+    type: select
+    include-all-proxies: true
+    filter: 'Globe'
+    proxies:
+      - "⛓️‍💥 代理节点"
+      - "DIRECT"
+    dialer-proxy-group: "🇯🇵 日本"
+
 rule-providers:
   cn_domain:
     type: http
@@ -245,54 +256,55 @@ rule-providers:
     interval: 86400
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt
     path: ./ruleset/loyalsoldier/telegramcidr.yaml
+
 rules:
-- DOMAIN,localhost,DIRECT
-- DOMAIN-SUFFIX,localhost,DIRECT
-- IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
-- IP-CIDR,::1/128,DIRECT,no-resolve
-- DOMAIN-SUFFIX,nju.edu.cn,DIRECT
-- DOMAIN-KEYWORD,fszb,DIRECT
-- DOMAIN-SUFFIX,rsfs.fangujn.com,DIRECT
-- DOMAIN-SUFFIX,fs-play.ipqipq.cn,DIRECT
-- DOMAIN-SUFFIX,apc.xzood6veuybwkr.com,DIRECT
-- DOMAIN-SUFFIX,openim-php-api.q2n1w3g2y5v0w4l1.cc,DIRECT
-- DOMAIN-SUFFIX,ws.n8u4z2s4j8m6d9g7.xyz,DIRECT
-- RULE-SET,cn_domain,DIRECT
-- RULE-SET,cn_ip,DIRECT,no-resolve
-- DOMAIN,alibaba.cdn.steampipe.steamcontent.com,DIRECT
-- DOMAIN,steamcdn-a.akamaihd.net,DIRECT
-- DOMAIN,steampipe.akamaized.net,DIRECT
-- DOMAIN,steampipe-partner.akamaized.net,DIRECT
-- DOMAIN,steampipe-kr.akamaized.net,DIRECT
-- DOMAIN-SUFFIX,steamcontent.com,DIRECT
-- DOMAIN-SUFFIX,steamserver.net,DIRECT
-- RULE-SET,applications,DIRECT
-- DOMAIN,clash.razord.top,DIRECT
-- DOMAIN,yacd.haishan.me,DIRECT
-- RULE-SET,private,DIRECT
-- RULE-SET,reject,REJECT
-- RULE-SET,lancidr,DIRECT,no-resolve
-- RULE-SET,cncidr,DIRECT,no-resolve
-- DOMAIN-SUFFIX,tabbitbrowser.com,🚀 节点选择
-- DOMAIN-SUFFIX,tabbit.ai,🚀 节点选择
-- DOMAIN-SUFFIX,tabbit-ai.com,🚀 节点选择
-- RULE-SET,ai,🤖 AI
-- RULE-SET,youtube_domain,🎬 Streaming
-- RULE-SET,netflix_domain,🎬 Streaming
-- RULE-SET,netflix_ip,🎬 Streaming,no-resolve
-- RULE-SET,disney_domain,🎬 Streaming
-- RULE-SET,spotify_domain,🎬 Streaming
-- RULE-SET,appletv_domain,🎬 Streaming
-- DOMAIN-SUFFIX,twitch.tv,🎬 Streaming
-- DOMAIN-SUFFIX,twitchcdn.net,🎬 Streaming
-- DOMAIN-SUFFIX,ttvnw.net,🎬 Streaming
-- DOMAIN-SUFFIX,jtvnw.net,🎬 Streaming
-- DOMAIN-SUFFIX,ext-twitch.tv,🎬 Streaming
-- DOMAIN-SUFFIX,twitchsvc.net,🎬 Streaming
-- RULE-SET,icloud,DIRECT
-- RULE-SET,apple,DIRECT
-- RULE-SET,google,🚀 节点选择
-- RULE-SET,gfw,🚀 节点选择
-- RULE-SET,proxy,🚀 节点选择
-- RULE-SET,telegramcidr,🚀 节点选择,no-resolve
-- MATCH,🚀 节点选择
+  - "DOMAIN,localhost,DIRECT"
+  - "DOMAIN-SUFFIX,localhost,DIRECT"
+  - "IP-CIDR,127.0.0.0/8,DIRECT,no-resolve"
+  - "IP-CIDR,::1/128,DIRECT,no-resolve"
+  - "DOMAIN-SUFFIX,nju.edu.cn,DIRECT"
+  - "DOMAIN-KEYWORD,fszb,DIRECT"
+  - "DOMAIN-SUFFIX,rsfs.fangujn.com,DIRECT"
+  - "DOMAIN-SUFFIX,fs-play.ipqipq.cn,DIRECT"
+  - "DOMAIN-SUFFIX,apc.xzood6veuybwkr.com,DIRECT"
+  - "DOMAIN-SUFFIX,openim-php-api.q2n1w3g2y5v0w4l1.cc,DIRECT"
+  - "DOMAIN-SUFFIX,ws.n8u4z2s4j8m6d9g7.xyz,DIRECT"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT,no-resolve"
+  - "DOMAIN,alibaba.cdn.steampipe.steamcontent.com,DIRECT"
+  - "DOMAIN,steamcdn-a.akamaihd.net,DIRECT"
+  - "DOMAIN,steampipe.akamaized.net,DIRECT"
+  - "DOMAIN,steampipe-partner.akamaized.net,DIRECT"
+  - "DOMAIN,steampipe-kr.akamaized.net,DIRECT"
+  - "DOMAIN-SUFFIX,steamcontent.com,DIRECT"
+  - "DOMAIN-SUFFIX,steamserver.net,DIRECT"
+  - "RULE-SET,applications,DIRECT"
+  - "DOMAIN,clash.razord.top,DIRECT"
+  - "DOMAIN,yacd.haishan.me,DIRECT"
+  - "RULE-SET,private,DIRECT"
+  - "RULE-SET,reject,REJECT"
+  - "RULE-SET,lancidr,DIRECT,no-resolve"
+  - "RULE-SET,cncidr,DIRECT,no-resolve"
+  - "DOMAIN-SUFFIX,tabbitbrowser.com,🚀 节点选择"
+  - "DOMAIN-SUFFIX,tabbit.ai,🚀 节点选择"
+  - "DOMAIN-SUFFIX,tabbit-ai.com,🚀 节点选择"
+  - "RULE-SET,ai,🤖 AI"
+  - "RULE-SET,youtube_domain,🎬 Streaming"
+  - "RULE-SET,netflix_domain,🎬 Streaming"
+  - "RULE-SET,netflix_ip,🎬 Streaming,no-resolve"
+  - "RULE-SET,disney_domain,🎬 Streaming"
+  - "RULE-SET,spotify_domain,🎬 Streaming"
+  - "RULE-SET,appletv_domain,🎬 Streaming"
+  - "DOMAIN-SUFFIX,twitch.tv,🎬 Streaming"
+  - "DOMAIN-SUFFIX,twitchcdn.net,🎬 Streaming"
+  - "DOMAIN-SUFFIX,ttvnw.net,🎬 Streaming"
+  - "DOMAIN-SUFFIX,jtvnw.net,🎬 Streaming"
+  - "DOMAIN-SUFFIX,ext-twitch.tv,🎬 Streaming"
+  - "DOMAIN-SUFFIX,twitchsvc.net,🎬 Streaming"
+  - "RULE-SET,icloud,DIRECT"
+  - "RULE-SET,apple,DIRECT"
+  - "RULE-SET,google,🚀 节点选择"
+  - "RULE-SET,gfw,🚀 节点选择"
+  - "RULE-SET,proxy,🚀 节点选择"
+  - "RULE-SET,telegramcidr,🚀 节点选择,no-resolve"
+  - "MATCH,🚀 节点选择"
