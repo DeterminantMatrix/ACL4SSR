@@ -2,7 +2,8 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
-      - "🇺🇸 DMIT"
+      - "🇺🇸 PalmSpring"
+      - "🇺🇸 Malibu"
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
       - "🇭🇰 酷网云"
@@ -22,7 +23,8 @@ proxy-groups:
     proxies:
       - "🇺🇸 落地鸡"
       - "🇯🇵 落地鸡"
-      - "🇺🇸 DMIT"
+      - "🇺🇸 PalmSpring"
+      - "🇺🇸 Malibu"
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
       - "🇭🇰 白猫云"
@@ -39,7 +41,8 @@ proxy-groups:
   - name: "🎬 Streaming"
     type: select
     proxies:
-      - "🇺🇸 DMIT"
+      - "🇺🇸 PalmSpring"
+      - "🇺🇸 Malibu"
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
       - "🇭🇰 酷网云"
@@ -56,7 +59,7 @@ proxy-groups:
   - name: "默认出口 自动"
     type: url-test
     include-all-proxies: true
-    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|Corona|64\.186\.243\.128|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|酷网|白猫|ku\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
+    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|PalmSpring|154\.17\.20\.144|Malibu|dmit\.shzt\.de|Corona|corona\.shzt\.de|64\.186\.243\.128|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|酷网|HK\.EN1\.D|ku\.shzt\.de|白猫|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
       - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
@@ -113,17 +116,24 @@ proxy-groups:
     interval: 60
     tolerance: 10
 
-  - name: "🇺🇸 DMIT"
+  - name: "🇺🇸 PalmSpring"
     type: select
     include-all-proxies: true
-    filter: '(?i)Malibu|64\.186\.228\.4'
+    filter: '(?i)PalmSpring|154\.17\.20\.144'
+    proxies:
+      - "⛓️‍💥 代理节点"
+
+  - name: "🇺🇸 Malibu"
+    type: select
+    include-all-proxies: true
+    filter: '(?i)Malibu|dmit\.shzt\.de|64\.186\.228\.4'
     proxies:
       - "⛓️‍💥 代理节点"
 
   - name: "🇺🇸 Corona"
     type: select
     include-all-proxies: true
-    filter: '(?i)Corona|64\.186\.243\.128'
+    filter: '(?i)Corona|corona\.shzt\.de|64\.186\.243\.128'
     proxies:
       - "⛓️‍💥 代理节点"
 
@@ -137,7 +147,7 @@ proxy-groups:
   - name: "🇭🇰 酷网云"
     type: select
     include-all-proxies: true
-    filter: '(?i)酷网|ku\.shzt\.de'
+    filter: '(?i)酷网|HK\.EN1\.D|ku\.shzt\.de'
     proxies:
       - "⛓️‍💥 代理节点"
 
@@ -164,7 +174,7 @@ proxy-groups:
     proxies:
       - "⛓️‍💥 代理节点"
       - "DIRECT"
-    dialer-proxy-group: "🇺🇸 DMIT"
+    dialer-proxy-group: "🇺🇸 PalmSpring"
 
 rule-providers:
   cn_domain:
