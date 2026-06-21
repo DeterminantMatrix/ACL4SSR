@@ -5,7 +5,7 @@ proxy-groups:
       - "🇺🇸 DMIT"
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
-      - "🇭🇰 华纳云"
+      - "🇭🇰 酷网云"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
@@ -26,7 +26,7 @@ proxy-groups:
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
       - "🇭🇰 白猫云"
-      - "🇭🇰 华纳云"
+      - "🇭🇰 酷网云"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
@@ -42,7 +42,7 @@ proxy-groups:
       - "🇺🇸 DMIT"
       - "🇺🇸 Corona"
       - "🇺🇸 白丝"
-      - "🇭🇰 华纳云"
+      - "🇭🇰 酷网云"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇺🇸 美东"
@@ -56,7 +56,7 @@ proxy-groups:
   - name: "默认出口 自动"
     type: url-test
     include-all-proxies: true
-    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|Corona|64\.186\.243\.128|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|华纳|白猫|hny\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
+    filter: '(?i)Silk|4837|Rabisu|HostDZire|DMIT|Malibu|Corona|64\.186\.243\.128|ChicagoVPS|Chicago|Nobrand|NoBrand|GreenCloud|IIJ|ALI|Ali|阿里|HostFuchs|HostingFuchs|酷网|白猫|ku\.shzt\.de|baicat\.shzt\.de|kr\.shzt\.de|de\.shzt\.de|lax\.shzt\.de|rabisu\.shzt\.de|chicago\.shzt\.de|nobrand\.shzt\.de|iij\.olise\.top'
     proxies:
       - "⛓️‍💥 代理节点"
     url: https://www.gstatic.com/generate_204
@@ -134,10 +134,10 @@ proxy-groups:
     proxies:
       - "⛓️‍💥 代理节点"
 
-  - name: "🇭🇰 华纳云"
+  - name: "🇭🇰 酷网云"
     type: select
     include-all-proxies: true
-    filter: '(?i)华纳|hny\.shzt\.de'
+    filter: '(?i)酷网|ku\.shzt\.de'
     proxies:
       - "⛓️‍💥 代理节点"
 
@@ -151,7 +151,7 @@ proxy-groups:
   - name: "🇯🇵 落地鸡"
     type: select
     include-all-proxies: true
-    filter: 'Globe'
+    filter: '(?i)懒猫|BigGlobe|BIgGlobe'
     proxies:
       - "⛓️‍💥 代理节点"
       - "DIRECT"
