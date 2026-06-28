@@ -2,10 +2,10 @@ proxy-groups:
   - name: "🚀 节点选择"
     type: select
     proxies:
+      - "🇺🇸 Megabox Pro"
       - "🇺🇸 PalmSpring"
       - "🇺🇸 Corona"
       - "🇭🇰 酷网云"
-      - "🇺🇸 Megabox Pro"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
@@ -22,11 +22,11 @@ proxy-groups:
     proxies:
       - "🇺🇸 落地鸡"
       - "🇯🇵 落地鸡"
+      - "🇺🇸 Megabox Pro"
       - "🇺🇸 PalmSpring"
       - "🇺🇸 Corona"
       - "🇭🇰 白猫云"
       - "🇭🇰 酷网云"
-      - "🇺🇸 Megabox Pro"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
@@ -39,10 +39,10 @@ proxy-groups:
   - name: "🎬 Streaming"
     type: select
     proxies:
+      - "🇺🇸 Megabox Pro"
       - "🇺🇸 PalmSpring"
       - "🇺🇸 Corona"
       - "🇭🇰 酷网云"
-      - "🇺🇸 Megabox Pro"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇺🇸 美东"
@@ -113,6 +113,13 @@ proxy-groups:
     interval: 60
     tolerance: 10
 
+  - name: "🇺🇸 Megabox Pro"
+    type: select
+    include-all-proxies: true
+    filter: '(?i)Megabox|MegaBox|Megabox\s*Pro'
+    proxies:
+      - "⛓️‍💥 代理节点"
+
   - name: "🇺🇸 PalmSpring"
     type: select
     include-all-proxies: true
@@ -131,13 +138,6 @@ proxy-groups:
     type: select
     include-all-proxies: true
     filter: '(?i)酷网|B型|B\s*Type|Type\s*B|HK\.B|ku\.shzt\.de'
-    proxies:
-      - "⛓️‍💥 代理节点"
-
-  - name: "🇺🇸 Megabox Pro"
-    type: select
-    include-all-proxies: true
-    filter: '(?i)Megabox|MegaBox|Megabox\s*Pro'
     proxies:
       - "⛓️‍💥 代理节点"
 
