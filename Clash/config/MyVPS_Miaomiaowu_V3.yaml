@@ -5,16 +5,16 @@ proxy-groups:
       - "🇺🇸 PalmSpring"
       - "🇺🇸 Corona"
       - "🇭🇰 酷网云"
-      - "🇭🇰 Megabox Pro"
+      - "🇺🇸 Megabox Pro"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
       - "🇺🇸 美东"
+      - "🇳🇱 荷兰"
       - "🇯🇵 落地鸡"
       - "🇺🇸 落地鸡"
       - "默认出口 自动"
-      - "🇳🇱 荷兰"
       - "DIRECT"
 
   - name: "🤖 AI"
@@ -26,14 +26,14 @@ proxy-groups:
       - "🇺🇸 Corona"
       - "🇭🇰 白猫云"
       - "🇭🇰 酷网云"
-      - "🇭🇰 Megabox Pro"
+      - "🇺🇸 Megabox Pro"
       - "🇺🇸 美西"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
       - "默认出口 自动"
       - "🇺🇸 美东"
-      - "🚀 节点选择"
       - "🇳🇱 荷兰"
+      - "🚀 节点选择"
       - "DIRECT"
 
   - name: "🎬 Streaming"
@@ -42,15 +42,15 @@ proxy-groups:
       - "🇺🇸 PalmSpring"
       - "🇺🇸 Corona"
       - "🇭🇰 酷网云"
-      - "🇭🇰 Megabox Pro"
+      - "🇺🇸 Megabox Pro"
       - "🇭🇰 白猫云"
       - "🇺🇸 美西"
       - "🇺🇸 美东"
+      - "🇳🇱 荷兰"
       - "🇯🇵 日本"
       - "🇰🇷 韩国"
       - "默认出口 自动"
       - "🚀 节点选择"
-      - "🇳🇱 荷兰"
       - "DIRECT"
 
   - name: "默认出口 自动"
@@ -134,7 +134,7 @@ proxy-groups:
     proxies:
       - "⛓️‍💥 代理节点"
 
-  - name: "🇭🇰 Megabox Pro"
+  - name: "🇺🇸 Megabox Pro"
     type: select
     include-all-proxies: true
     filter: '(?i)Megabox|MegaBox|Megabox\s*Pro'
@@ -164,7 +164,7 @@ proxy-groups:
     proxies:
       - "⛓️‍💥 代理节点"
       - "DIRECT"
-    dialer-proxy-group: "🇺🇸 PalmSpring"
+    dialer-proxy-group: "🇺🇸 Megabox Pro"
 
 rule-providers:
   cn_domain:
